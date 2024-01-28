@@ -2,6 +2,6 @@
 
 Proyecto realizado con React y Tailwind CSS
 
-![Captura de Pantalla en donde se previsualiza todas las películas](image.png)
+![Screenshot movies](./docs/images/movies.png)
 
-![Captua de Pantalla en donde se previsualiza el detalle de una película ](image-1.png)
+![Screenshot detail movie](./docs/images/movie%20detail.png)
