@@ -1,25 +1,25 @@
-import { useCallback } from 'react'
 import { useSearch } from '../hooks/useSearch'
-import debounce from 'just-debounce-it'
 import { useMovies } from '../hooks/useMovies'
 import { Search } from './Search'
+import { useEffect } from 'react'
 
 export function Header() {
   const { search, updateSearch, error: errorSearch } = useSearch()
   const { loading, getMovies } = useMovies()
 
-  /* Debounce to get Movies when the client is typing */
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const debounceGetMovies = useCallback(debounce((search) => {
-    getMovies({ search })
-  }, 300),
-    []
-  )
+  useEffect(() => {
+
+    const debounceMovies = setTimeout(() => {
+      getMovies({ search })
+    }, 400)
+
+    return () => clearTimeout(debounceMovies)
+
+  }, [search, getMovies])
 
   const handleChange = (event) => {
     const newSearch = event.target.value
     updateSearch(newSearch)
-    if (!errorSearch) debounceGetMovies(newSearch)
   }
 
   const handleSubmit = (event) => {
