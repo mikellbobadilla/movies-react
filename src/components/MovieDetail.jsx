@@ -56,12 +56,11 @@ function Movie({ movie }) {
 
 
 export function MovieDetail({ movie }) {
+    
     return (
         
         (!movie)
             ? <NoMovieDetails />
-            : <Movie movie={movie} />
-            
-        
+            : <Movie movie={movie} /> 
     )
 }
