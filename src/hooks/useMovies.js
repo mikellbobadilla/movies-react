@@ -1,6 +1,5 @@
 import { useRef, useState, useCallback } from 'react'
-
-import { searchMovies } from '../service/service_movies'
+import { MovieService } from '../service/movie_service'
 import { useContext } from 'react'
 import { MoviesContext } from '../context/context_movies'
 
@@ -16,7 +15,7 @@ export function useMovies () {
       setLoading(true)
       setError(null)
       prevSearch.current = search
-      const newMovies = await searchMovies({ search })
+      const newMovies = await MovieService.getBy({ search })
       setMovies(newMovies)
     } catch (e) {
       setError(e.message)
