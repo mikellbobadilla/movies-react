@@ -9,7 +9,6 @@ export function Movie() {
     }, [])
 
     const movie = useLoaderData()
-    console.log(movie)
     return (
         <MovieDetail movie={movie} />
     )
