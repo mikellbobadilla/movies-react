@@ -1,5 +1,5 @@
 import { MovieCard } from './MovieCard'
-import { MoviesContext } from '../context/context_movies'
+import { MoviesContext } from '../context/movies_context'
 import { useContext } from 'react'
 import { Spinner } from './Spinner'
 

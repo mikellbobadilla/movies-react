@@ -1,5 +1,5 @@
 import { RouterProvider } from 'react-router-dom'
-import { MoviesProvider } from './context/context_movies'
+import { MoviesProvider } from './context/movies_context'
 import { router } from './router'
 
 export default function App() {

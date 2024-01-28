@@ -1,7 +1,7 @@
 import { useRef, useState, useCallback } from 'react'
 import { MovieService } from '../service/movie_service'
 import { useContext } from 'react'
-import { MoviesContext } from '../context/context_movies'
+import { MoviesContext } from '../context/movies_context'
 
 export function useMovies () {
   const { movies, setMovies, setLoading, loading } = useContext(MoviesContext)
