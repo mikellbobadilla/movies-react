@@ -10,6 +10,7 @@ export function useMovie({ movieId }) {
     useEffect(() => {
         async function getMovie() {
             try {
+                window.scrollTo(0, 0)
                 setLoading(true)
                 setError(null)
                 const newMovie = await MovieService.get({ movieId })
