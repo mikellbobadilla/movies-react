@@ -55,12 +55,12 @@ function Movie({ movie }) {
 }
 
 
-export function MovieDetail({ movie }) {
-    
+export function MovieDetail({ movie, error }) {
+
     return (
-        
-        (!movie)
+
+        error
             ? <NoMovieDetails />
-            : <Movie movie={movie} /> 
+            : <Movie movie={movie} />
     )
 }
