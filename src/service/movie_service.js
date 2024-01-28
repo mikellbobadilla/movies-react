@@ -28,9 +28,7 @@ async function getMovies ({search}) {
     }
 }
 
-async function getMovie({params}) {
-
-    const {movieId} = params
+async function getMovie({movieId}) {
 
     if(movieId.trim() === '') return null
 
