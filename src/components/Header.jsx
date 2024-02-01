@@ -28,8 +28,8 @@ export function Header() {
   }
 
   return (
-    <header className='container mx-auto p-3 w-full'>
-      <h1 className='text-3xl lg:text-5xl text-center mb-10 text-red-300/80 font-semibold'>Movie search</h1>
+    <header className='container mx-auto p-3 w-full mb-5'>
+      <h1 className='text-3xl text-cruise-200 text-center mb-10  font-bold'>Movie search</h1>
       <Search
         handleChange={handleChange}
         handleSubmit={handleSubmit}
