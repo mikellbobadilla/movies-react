@@ -5,15 +5,13 @@ import { Spinner } from './Spinner'
 
 function ListOfMovies({ movies }) {
   return (
-    <ul className='grid grid-cols-1 mx-auto gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:max-w-7xl'>
-      {movies?.map(({ id, title, poster, year, type }) => (
-        <li key={id} className='rounded-md bg-gray-800/50 hover:bg-gray-500/10 transition relative'>
+    <ul className='grid grid-cols-2 mx-auto gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:max-w-5xl'>
+      {movies?.map(({ id, title, poster }) => (
+        <li key={id} className='transition relative'>
           <MovieCard
             url={`/movies/${id}`}
             title={title}
             poster={poster}
-            year={year}
-            type={type}
           />
         </li>
       ))}
